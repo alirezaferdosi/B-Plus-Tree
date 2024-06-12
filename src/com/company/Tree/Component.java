@@ -1,30 +1,34 @@
 package com.company.Tree;
 
-public class Component {
-    private Component left;
-    private Long searchKey;
-    private Component right;
+public class Component<T>{
+    private Node left;
+    private T searchKey;
+    private Node right;
+
+    public Component(T searchKey){
+        this.searchKey = searchKey;
+    }
 
 
-    public Component setLeft(Component left){
+    public Node setLeft(Node left){
         return this.left = left;
     }
 
-    public Component setRight(Component right){ return this.right = right; }
+    public Node setRight(Node right){ return this.right = right; }
 
-    public Long setSearchKey(Long searchKey){
+    public T setSearchKey(T searchKey){
         return this.searchKey = searchKey;
     }
 
-    public Component getLeft() {
+    public Node getLeft() {
         return left;
     }
 
-    public Long getSearchKey() {
+    public T getSearchKey() {
         return searchKey;
     }
 
-    public Component getRight() {
+    public Node getRight() {
         return right;
     }
 }
